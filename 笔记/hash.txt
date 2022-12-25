@@ -1,0 +1,17 @@
+用hash函数把字符串变成数字
+
+一个常用的字符串hash函数：hash[i]=(hash[i-1]*p+idx(s[i]))%mod
+其中idx为s的一个自定义索引
+
+eg：对于字符"abab",p=7,mod=91,idx(s[i])=int(s[i]-'a')
+hash[0]=idx('a')%mod=1
+hash[1]=hash[0]*p+idx('b')%mod=9
+hash[2]=hash[1]*p+idx('a')%mod=64
+hash[3]=hash[2]*p+idx('b')%mod=86，即字符串"abab"被映射为86
+
+hash[2..3]=((hash[3]-hash[1]*p^2)%mod+mod)%mod=9=hash[1]，
+即"abab"的第一个"ab"和第二个"ab"所对应的hash值相同，都是9
+
+避免可能的恰好重复，mod应取大，如10^9+7
+
+例题：POJ2406

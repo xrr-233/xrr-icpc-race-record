@@ -1,0 +1,4 @@
+SA[i]：排序之后的第i个后缀是排序之前的第SA[i]个后缀
+rank[i]：排序之前的第i个后缀是排序之后的第rank[i]个后缀
+
+https://zhuanlan.zhihu.com/p/78769816

@@ -1,0 +1,15 @@
+Ford-Fulkerson，EK已经会了
+
+FF的低效：https://www.cnblogs.com/graytido/p/10809211.html 图片
+
+dinic：
+
+while(bfs能够到达G){
+
+	分层：bfs为每一个点分配一个深度
+
+	然后我们进行若干遍dfs寻找增广路，每一次由u推出v必须保证v的深度必须是u的深度+1
+
+	直到不能再dfs
+
+}

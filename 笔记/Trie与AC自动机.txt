@@ -1,0 +1,22 @@
+Trie树
+
+根节点不包含字符
+构建方式：下标和字符一一映射 int ch[maxnode][sigma_size]
+
+ch[1][1]=2 表示 节点1编号为1的子节点的是节点2
+编号表示字母，0为a，1为b，...
+
+ch[0][0]=1,ch[1][1]=2,ch[2][2]=3,ch[2][0]=4
+就存了"abc"和"aba"两个串
+
+AC自动机
+
+建立在Trie和KMP的基础之上
+
+bfs构造fail指针
+
+hdu1686 KMP模板
+POJ3321 POJ3067 树状数组
+POJ2001 POJ3630 trie
+洛谷P3808 HDU2222 POJ1204 HDU5880 AC自动机
+
